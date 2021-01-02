@@ -36,10 +36,9 @@ class Map_vendorSampleState extends State<Map_vendorSample> {
                     padding: EdgeInsets.all(8),
                     child: Center(
                       child: Container(
-                        width: 150,
-                        height: 100,
-                        child: Image.asset('assets/images/logotruck.png')
-                      ),
+                          width: 150,
+                          height: 100,
+                          child: Image.asset('assets/images/logotruck.png')),
                     ),
                   ),
                 ),
@@ -64,19 +63,31 @@ class Map_vendorSampleState extends State<Map_vendorSample> {
         ),
       ),
       appBar: AppBar(
-              leading: InkWell(
-          onTap: (){
-             scaffold_key.currentState.openDrawer();
+        leading: InkWell(
+          onTap: () {
+            scaffold_key.currentState.openDrawer();
           },
-          child: Image.asset('assets/images/menuIcon.png', scale: 1.2,),
+          child: Image.asset(
+            'assets/images/menuIcon.png',
+            scale: 1.2,
           ),
+        ),
         actions: <Widget>[
-         Image.asset('assets/images/truckIcon.png', width: 100,),
-         SizedBox(width: 8,)
+          Image.asset(
+            'assets/images/truckIcon.png',
+            width: 100,
+          ),
+          SizedBox(
+            width: 8,
+          )
         ],
         backgroundColor: Colors.white,
         centerTitle: true,
-       title: Text('Current Users', style: TextStyle(color: Colors.black), overflow: TextOverflow.visible,),
+        title: Text(
+          'Current Users',
+          style: TextStyle(color: Colors.black),
+          overflow: TextOverflow.visible,
+        ),
       ),
       body: bodywidget(),
     );
@@ -141,7 +152,7 @@ class bodywidgetstate extends State<bodywidget> {
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         marker.clear();
-        for(index_value in snapshots.data){
+        for (index_value in snapshots.data) {
           marker.add(Marker(
               markerId: MarkerId(index_value.user.toString()),
               icon: BitmapDescriptor.defaultMarker,
@@ -187,7 +198,6 @@ class bodywidgetstate extends State<bodywidget> {
                                 double.parse(snapshots.data[index].Lan),
                                 double.parse(snapshots.data[index].Log),
                               ))));
-
                     },
                     itemCount: snapshots.data.length,
                     scrollDirection: Axis.horizontal,
@@ -203,7 +213,7 @@ class bodywidgetstate extends State<bodywidget> {
                                   width: 250,
                                   height: 140,
                                   child: Flexible(
-                                    child:  Card(
+                                    child: Card(
                                       color: Color(0xFF67b9fb).withOpacity(0.2),
                                       child: Container(
                                         width: 250,
@@ -213,8 +223,8 @@ class bodywidgetstate extends State<bodywidget> {
                                               padding: const EdgeInsets.only(
                                                   left: 8.0, right: 8),
                                               child: InkWell(
-                                                onTap: ()async{
-                                         GoogleMapController
+                                                onTap: () async {
+                                                  GoogleMapController
                                                       controller =
                                                       await _controller.future;
                                                   return controller
@@ -240,12 +250,18 @@ class bodywidgetstate extends State<bodywidget> {
                                                   height: 80,
                                                   width: 100,
                                                   decoration: BoxDecoration(
-                                                    gradient: LinearGradient(colors: [Color(0xff8acbff), Color(0xff67b9fb)],
-                                                    begin: Alignment.centerLeft,
-                                                    end: Alignment.centerRight,
+                                                    gradient: LinearGradient(
+                                                      colors: [
+                                                        Color(0xff8acbff),
+                                                        Color(0xff67b9fb)
+                                                      ],
+                                                      begin:
+                                                          Alignment.centerLeft,
+                                                      end:
+                                                          Alignment.centerRight,
                                                     ),
                                                     shape: BoxShape.circle,
-                                                     color: Colors.lightBlue,
+                                                    color: Colors.lightBlue,
                                                   ),
                                                   margin: const EdgeInsets.only(
                                                       top: 5.0, bottom: 5),
@@ -255,15 +271,16 @@ class bodywidgetstate extends State<bodywidget> {
                                                       style: TextStyle(
                                                         fontSize: 18,
                                                         fontFamily: 'Futura',
-                                                          color: Colors.white,
-                                                          fontWeight: FontWeight.bold ,
-                                                          ),
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
                                               ),
                                             ),
-                                             SizedBox(
+                                            SizedBox(
                                               width: 200,
                                               child: Divider(
                                                 color: Colors.black,
@@ -276,7 +293,8 @@ class bodywidgetstate extends State<bodywidget> {
                                                 right: 8,
                                               ),
                                               child: Text(
-                                                '${snapshots.data[index].distance} '+' MILES AWAY',
+                                                '${snapshots.data[index].distance} ' +
+                                                    ' MILES AWAY',
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.bold,
                                                     color: Colors.black,
@@ -286,12 +304,10 @@ class bodywidgetstate extends State<bodywidget> {
                                                 overflow: TextOverflow.fade,
                                               ),
                                             ),
-
                                           ],
                                         ),
                                       ),
                                     ),
-
                                   ),
                                 ),
                               ),

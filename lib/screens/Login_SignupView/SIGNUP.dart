@@ -26,6 +26,7 @@ class SIGNUPSTATE extends State<SIGNUP> {
   var re_password;
   final form_key = GlobalKey<FormState>();
   final form_key1 = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

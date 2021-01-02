@@ -129,24 +129,14 @@ Widget UserLogin(email, password, context, form_key) {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            // Padding(
-            //   padding: EdgeInsets.all(MediaQuery.of(context).size.height / 14),
-            //   child: Container(
-            //       width: 150,
-            //       height: 100,
-            // child: Image.asset('assets/images/logotruck.png')),
-            // ),
-
             SizedBox(
               height: 200.0,
             ),
-
             Padding(
               padding: EdgeInsets.only(
                   right: MediaQuery.of(context).size.width / 50, bottom: 20),
               child: FractionallySizedBox(
                 widthFactor: 0.85,
-                // width: 300,
                 child: TextFormField(
                   validator: (value) {
                     if (value.isEmpty) {
@@ -156,21 +146,6 @@ Widget UserLogin(email, password, context, form_key) {
                       return null;
                     }
                   },
-                  // decoration: InputDecoration(
-                  //     focusedBorder: OutlineInputBorder(
-                  //         borderRadius: BorderRadius.circular(8)),
-                  //     labelText: 'Email',
-                  //     labelStyle: TextStyle(
-                  //       color: Colors.black54,
-                  //     ),
-                  //     icon: Icon(
-                  //       Icons.person,
-                  //       color: Colors.white,
-                  //     ),
-                  //     border: OutlineInputBorder(
-                  //         borderRadius: BorderRadius.circular(8))
-
-                  //         ),
                   decoration: InputDecoration(
                     hintText: 'Email',
                     hintStyle: TextStyle(
@@ -178,17 +153,14 @@ Widget UserLogin(email, password, context, form_key) {
                         fontSize: 16.0,
                         color: Colors.blue),
                     suffixIcon: Icon(Icons.email),
-                    // contentPadding: EdgeInsets.all(5.0)
                   ),
                 ),
               ),
             ),
-
             Padding(
               padding: EdgeInsets.only(
                   right: MediaQuery.of(context).size.width / 50, bottom: 20),
               child: FractionallySizedBox(
-                // width: 300,
                 widthFactor: 0.85,
                 child: TextFormField(
                   validator: (value) {
@@ -199,20 +171,6 @@ Widget UserLogin(email, password, context, form_key) {
                       return null;
                     }
                   },
-                  // decoration: InputDecoration(
-                  //     focusedBorder: OutlineInputBorder(
-                  //         borderRadius: BorderRadius.circular(8)),
-                  //     labelText: 'Password',
-                  //     labelStyle: TextStyle(
-                  //       color: Colors.black54,
-                  //     ),
-                  //     icon: Icon(
-                  //       Icons.person,
-                  //       color: Colors.white,
-                  //     ),
-                  //     border: OutlineInputBorder(
-                  //         borderRadius: BorderRadius.circular(8))
-                  //         ),
 
                   /// t button style
                   decoration: InputDecoration(
@@ -222,66 +180,15 @@ Widget UserLogin(email, password, context, form_key) {
                         fontSize: 16.0,
                         color: Colors.blue),
                     suffixIcon: Icon(Icons.vpn_key),
-                    // contentPadding: EdgeInsets.all(5.0)
                   ),
 
                   ///
                 ),
               ),
             ),
-
-            // Padding(
-            //   padding: const EdgeInsets.all(8.0),
-            //   child: InkWell(
-            //       onTap: () {
-            //         Navigator.push(context,
-            //             MaterialPageRoute(builder: (context) {
-            //           return SIGNUP();
-            //         }));
-            //       },
-            //       child: Container(
-            //           decoration: BoxDecoration(
-            //               border: Border.all(
-            //                 color: Colors.black54,
-            //               ),
-            //               borderRadius: BorderRadius.circular(8)),
-            //           child: Padding(
-            //             padding: const EdgeInsets.all(4.0),
-            //             child: Text("Don't Have an Account? Register"),
-            //           ))),
-            // ),
-            // Padding(
-            //   padding: EdgeInsets.all(12.0),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.center,
-            //     children: <Widget>[
-            //       Padding(
-            //         padding: const EdgeInsets.all(8.0),
-            //         child: Container(
-            //           width: 10,
-            //           height: 1,
-            //           color: Colors.black54,
-            //         ),
-            //       ),
-            //       Text(
-            //         'or',
-            //         style: TextStyle(fontStyle: FontStyle.italic),
-            //       ),
-            //       Padding(
-            //         padding: const EdgeInsets.all(8.0),
-            //         child: Container(
-            //           width: 10,
-            //           height: 1,
-            //           color: Colors.black54,
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
             SizedBox(
               height: 15.0,
             ),
-
             Consumer<WebServices>(
               builder: (context, webservices_consumer, child) => Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -332,7 +239,6 @@ Widget UserLogin(email, password, context, form_key) {
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontSize: 18,
-                                  //   textColor: Colors.white,
                                   color: Colors.white,
                                   fontWeight: FontWeight.w300,
                                 ),
@@ -342,13 +248,10 @@ Widget UserLogin(email, password, context, form_key) {
                         )
                       : CircularProgressIndicator()),
             ),
-
             SizedBox(
               height: 30.0,
             ),
-
             Padding(
-                // padding: EdgeInsets.all(15),
                 padding: EdgeInsets.only(
                     right: MediaQuery.of(context).size.width / 7, bottom: 20),
                 child: Column(
@@ -361,7 +264,6 @@ Widget UserLogin(email, password, context, form_key) {
                         fontFamily: 'Arial',
                         fontSize: 11,
                         color: Colors.blue,
-                        //   fontWeight: FontWeight.w200,
                       ),
                     ),
                     InkWell(
@@ -407,15 +309,6 @@ Widget VendorLogin(email, password, context, form_key) {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    // Padding(
-                    //   padding: EdgeInsets.all(
-                    //       MediaQuery.of(context).size.height / 14),
-                    //   child: Container(
-                    //       width: 150,
-                    //       height: 100,
-                    //       child: Image.asset('assets/images/logotruck.png')),
-                    // ),
-
                     SizedBox(
                       height: 200.0,
                     ),
@@ -435,19 +328,6 @@ Widget VendorLogin(email, password, context, form_key) {
                               return null;
                             }
                           },
-                          // decoration: InputDecoration(
-                          //     focusedBorder: OutlineInputBorder(
-                          //         borderRadius: BorderRadius.circular(8)),
-                          //     labelText: 'Email',
-                          //     labelStyle: TextStyle(
-                          //       color: Colors.black54,
-                          //     ),
-                          //     icon: Icon(
-                          //       Icons.person,
-                          //       color: Colors.white,
-                          //     ),
-                          //     border: OutlineInputBorder(
-                          //         borderRadius: BorderRadius.circular(8))),
 
                           /// t buttonstyle
                           decoration: InputDecoration(
@@ -457,7 +337,6 @@ Widget VendorLogin(email, password, context, form_key) {
                                 fontSize: 16.0,
                                 color: Colors.blue),
                             suffixIcon: Icon(Icons.email),
-                            // contentPadding: EdgeInsets.all(5.0)
                           ),
 
                           ///
@@ -481,20 +360,6 @@ Widget VendorLogin(email, password, context, form_key) {
                               return null;
                             }
                           },
-                          // decoration: InputDecoration(
-                          //     focusedBorder: OutlineInputBorder(
-                          //         borderRadius: BorderRadius.circular(8)),
-                          //     labelText: 'Password',
-                          //     labelStyle: TextStyle(
-                          //       color: Colors.black54,
-                          //     ),
-                          //     icon: Icon(
-                          //       Icons.person,
-                          //       color: Colors.white,
-                          //     ),
-                          //     border: OutlineInputBorder(
-                          //         borderRadius: BorderRadius.circular(8))
-                          //         ),
 
                           /// t button style
                           decoration: InputDecoration(
@@ -504,7 +369,6 @@ Widget VendorLogin(email, password, context, form_key) {
                                 fontSize: 16.0,
                                 color: Colors.blue),
                             suffixIcon: Icon(Icons.vpn_key),
-                            // contentPadding: EdgeInsets.all(5.0)
                           ),
 
                           ///
@@ -512,72 +376,12 @@ Widget VendorLogin(email, password, context, form_key) {
                         ),
                       ),
                     ),
-
                     SizedBox(
                       height: 15.0,
                     ),
-
-                    // Padding(
-                    //     padding: const EdgeInsets.all(8.0),
-                    //     child: InkWell(
-                    //         onTap: () {
-                    //           Navigator.push(context,
-                    //               MaterialPageRoute(builder: (context) {
-                    //             return SIGNUP();
-                    //           }));
-                    //         },
-                    //         child: Container(
-                    //             decoration: BoxDecoration(
-                    //                 border: Border.all(
-                    //                   color: Colors.black54,
-                    //                 ),
-                    //                 borderRadius: BorderRadius.circular(8)),
-                    //             child: Padding(
-                    //               padding: const EdgeInsets.all(4.0),
-                    //               child:
-                    //                   Text("Don't Have an Account? Register"),
-                    //             )))),
-
-                    // Padding(
-                    //   padding: EdgeInsets.all(10.0),
-                    //   child: Row(
-                    //     mainAxisAlignment: MainAxisAlignment.center,
-                    //     children: <Widget>[],
-                    //   ),
-                    // ),
-                    // Padding(
-                    //   padding: EdgeInsets.all(12.0),
-                    //   child: Row(
-                    //     mainAxisAlignment: MainAxisAlignment.center,
-                    //     children: <Widget>[
-                    //       Padding(
-                    //         padding: const EdgeInsets.all(8.0),
-                    //         child: Container(
-                    //           width: 10,
-                    //           height: 1,
-                    //           color: Colors.black54,
-                    //         ),
-                    //       ),
-                    //       Text(
-                    //         'or',
-                    //         style: TextStyle(fontStyle: FontStyle.italic),
-                    //       ),
-                    //       Padding(
-                    //         padding: const EdgeInsets.all(8.0),
-                    //         child: Container(
-                    //           width: 10,
-                    //           height: 1,
-                    //           color: Colors.black54,
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-
                     Consumer<WebServices>(
                       builder: (context, webservices_consumer, child) =>
                           Padding(
-                        // padding: const EdgeInsets.fromLTRB(35, 15, 35, 15),
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -609,40 +413,6 @@ Widget VendorLogin(email, password, context, form_key) {
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(30)),
-                                    // padding: EdgeInsets.all(0.0),
-                                    // padding:
-                                    //     EdgeInsets.fromLTRB(35, 15, 35, 15),
-                                    // child: Ink(
-                                    //   decoration: BoxDecoration(
-                                    //     gradient: LinearGradient(
-                                    //       colors: [
-                                    //         Color(0xff67b9fb),
-                                    //         Color(0xff8acbff)
-                                    //       ],
-                                    //       begin: Alignment.centerLeft,
-                                    //       end: Alignment.centerRight,
-                                    //     ),
-                                    //     // borderRadius:
-                                    //     //     BorderRadius.circular(30)
-                                    //   ),
-                                    //   child: Container(
-                                    //     constraints: BoxConstraints(
-                                    //         maxWidth: 100.0, minHeight: 50.0),
-                                    //     alignment: Alignment.center,
-                                    //     child: Text(
-                                    //       "Login",
-                                    //       textAlign: TextAlign.center,
-                                    //       // style: TextStyle(color: Colors.white),
-                                    //       style: TextStyle(
-                                    //         fontFamily: 'Poppins',
-                                    //         fontSize:
-                                    //             18, //   textColor: Colors.white,
-                                    //         color: Colors.white,
-                                    //         fontWeight: FontWeight.w300,
-                                    //       ),
-                                    //     ),
-                                    //   ),
-                                    // ),
                                     padding: EdgeInsets.all(0.0),
                                     child: Ink(
                                       decoration: BoxDecoration(
@@ -667,7 +437,6 @@ Widget VendorLogin(email, password, context, form_key) {
                                           style: TextStyle(
                                             fontFamily: 'Poppins',
                                             fontSize: 18,
-                                            //   textColor: Colors.white,
                                             color: Colors.white,
                                             fontWeight: FontWeight.w300,
                                           ),
@@ -680,82 +449,10 @@ Widget VendorLogin(email, password, context, form_key) {
                         ),
                       ),
                     ),
-
-                    // Padding(
-                    //     padding: const EdgeInsets.all(15),
-                    //     child: InkWell(
-                    //         onTap: () {
-                    //           Navigator.push(context,
-                    //               MaterialPageRoute(builder: (context) {
-                    //             return SIGNUP();
-                    //           }));
-                    //         },
-                    //         child: Container(
-                    //             // decoration: BoxDecoration(
-                    //             //     border: Border.all(
-                    //             //       color: Colors.black54,
-                    //             //     ),
-                    //             //     borderRadius: BorderRadius.circular(8)
-                    //             //     ),
-                    //             //     child: Padding(
-                    //             //   padding: const EdgeInsets.all(4.0),
-                    //             //   child: Text(
-                    //             //     "Don't Have an Account? Register",
-                    //             //     style: TextStyle(
-                    //             //       fontFamily: 'Arial',
-                    //             //       fontSize: 12,
-                    //             //       color: Colors.blue,
-                    //             //       //   fontWeight: FontWeight.w200,
-                    //             //     ),
-                    //             //   ),
-                    //             // )
-
-                    //             //                 Padding(
-                    //             // padding: EdgeInsets.all(15),
-                    //             // child: Column(
-                    //             //   crossAxisAlignment: CrossAxisAlignment.end,
-                    //             //   mainAxisSize: MainAxisSize.min,
-                    //             //   children: <Widget>[
-                    //             //     Text(
-                    //             //       'Already have an account?',
-                    //             //       style: TextStyle(
-                    //             //         //   fontFamily: 'Arial',
-                    //             //         //   fontSize: 16,
-                    //             //         color: Colors.blue,
-                    //             //         //   fontWeight: FontWeight.w200,
-                    //             //       ),
-                    //             //     ),
-                    //             //     InkWell(
-                    //             //       child: Row(
-                    //             //         mainAxisSize: MainAxisSize.max,
-                    //             //         mainAxisAlignment: MainAxisAlignment.end,
-                    //             //         children: <Widget>[
-                    //             //           Icon(Icons.vpn_key),
-                    //             //           Text(
-                    //             //             'Sign in',
-                    //             //             textAlign: TextAlign.right,
-                    //             //             style: TextStyle(
-                    //             //               fontFamily: 'Arial',
-                    //             //               fontSize: 16,
-                    //             //               color: Colors.blue,
-                    //             //               fontWeight: FontWeight.w200,
-                    //             //             ),
-                    //             //           ),
-                    //             //         ],
-                    //             //       ),
-                    //             //     ),
-                    //             //   ],
-                    //             // ))
-
-                    //             )
-                    //             )
-                    //             ),
                     SizedBox(
                       height: 30.0,
                     ),
-
                     Padding(
-                        // padding: EdgeInsets.all(15),
                         padding: EdgeInsets.only(
                             right: MediaQuery.of(context).size.width / 7,
                             bottom: 20),
@@ -769,7 +466,6 @@ Widget VendorLogin(email, password, context, form_key) {
                                 fontFamily: 'Arial',
                                 fontSize: 11,
                                 color: Colors.blue,
-                                //   fontWeight: FontWeight.w200,
                               ),
                             ),
                             InkWell(

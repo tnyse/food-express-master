@@ -6,6 +6,9 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
 import 'package:foodtruck/screens/VendorView/VENDORprofile.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/services.dart' show rootBundle;
+
+String _mapStyle;
 
 class Map_user extends StatelessWidget {
   @override
@@ -102,10 +105,19 @@ class bodywidget extends StatefulWidget {
   }
 }
 
+// @override
+// void initState() {
+//   super.initState();
+
+//   rootBundle.loadString('assets/mapstyle.txt').then((string) {
+//     _mapStyle = string;
+//   });
+// }
+
 class bodywidgetstate extends State<bodywidget> {
   Completer<GoogleMapController> _controller = Completer();
   var marker = Set<Marker>();
-  var zoom_value = 12.0;
+  var zoom_value = 22.0;
   var index_value;
   var range_value = 50.0;
 
@@ -333,7 +345,7 @@ class bodywidgetstate extends State<bodywidget> {
                       activeTrackColor: Colors.blue[700],
                       inactiveTrackColor: Colors.blue[100],
                       trackShape: RoundedRectSliderTrackShape(),
-                      trackHeight: 5.0,
+                      trackHeight: 2.0,
                       thumbShape:
                           RoundSliderThumbShape(enabledThumbRadius: 12.0),
                       thumbColor: Colors.lightBlueAccent,
